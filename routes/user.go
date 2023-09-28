@@ -1,9 +1,10 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/Bhuwanadhikari346/go-gin-crud/controller"
+	"github.com/gin-gonic/gin"
+)
 
 func UserRoute(router *gin.Engine){
-	router.GET("/user", func(c *gin.Context) {
-		c.String(200,"hey user")
-	})
+	router.GET("/user", controller.UserController)
 }
